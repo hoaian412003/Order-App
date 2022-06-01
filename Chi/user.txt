@@ -1,0 +1,71 @@
+#include "User.h"
+
+User :: User()
+{
+    username="";
+    password="";
+}
+void User :: Login()
+{
+    string username1, password1;
+    cout << "Input your username: "; cin >> username1;
+    cout << "Input your password: "; cin >> password1;
+    ifstream fileInput ("User.txt", ios::in);
+    if (fileInput.fail())
+        cout << "Failed to open this file!" << endl;
+	while (!fileInput.eof())
+    {
+        string _username;
+        fileInput >> _username;
+        string _password;
+        fileInput >> _password;
+        if (username1 == _username)
+        {
+            if (password1 == _password)
+            {
+                this -> username = _username; this -> password = _password;
+                break;
+            }
+            else
+            {
+                cout << "Password incorrect!";
+                Login();
+            }
+        }
+    }
+    fileInput.close();
+}
+void User :: Register()
+{
+    string username1, password1;
+    cout << "Input your username: "; cin >> username1;
+    ifstream fileInput ("User.txt", ios::in);
+    if (fileInput.fail())
+        cout << "Failed to open this file!" << endl;
+	while (!fileInput.eof())
+    {
+        string _username;
+        fileInput >> _username;
+        string *password1=new string;
+        fileInput >> *password1;
+        delete[] password1;
+        if (username1 == _username)
+        {
+            cout << "Tai khoan da ton tai!";
+            Register();
+        }
+        else
+        {
+            string _password;
+            cout << "Input your password: "; cin >> _password;
+            ofstream fileOutput("User.txt");
+            fileOutput << _username << " " << _password << endl;
+            fileOutput.close();
+            break;
+        }
+    }
+    fileInput.close();
+}
+Voucher User :: LoadVoucher(string username)
+{
+}

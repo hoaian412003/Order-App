@@ -1,0 +1,52 @@
+#include "Menu.h"
+
+Item :: Item(string name, string option, int prize)
+{
+  this->name=name;
+  this->option=option;
+  this->prize=prize;
+}
+string Item :: getName()
+{
+    return name;
+}
+string Item :: getOption()
+{
+    return option;
+}
+int Item :: getPrize()
+{
+    return prize;
+}
+
+Menu :: Menu()
+{
+
+}
+void Menu :: List()
+{
+    string x="";
+    for(int i=0; i<menu.size(); i++)
+    {
+        if(x==menu[i].getName())
+        {
+            cout << setw(35) << left << i+1;
+            cout << setw(15) << left << menu[i].getOption();
+            cout << setw(10) << left << menu[i].getPrize();
+        }
+        else
+        {
+            cout << setw(5) << left << i+1;
+            cout << setw(30) << left << menu[i].getName();
+            cout << setw(15) << left << menu[i].getOption();
+            cout << setw(10) << left << menu[i].getPrize();
+            x=menu[i].getName();
+        }
+    }
+}
+void Menu :: Choose(int choose, voucher *voucher)
+{
+
+}
+
+

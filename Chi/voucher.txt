@@ -1,0 +1,30 @@
+#include "Voucher.h"
+
+Voucher :: Voucher (string username)
+{
+    ifstream fileInput ("Voucher.txt", ios::in);
+    if (fileInput.fail())
+        cout << "Failed to open this file!" << endl;
+	if (!fileInput.eof())
+    {
+        float _scale;
+        fileInput >> _scale;
+        string _description;
+        fileInput >> _description;
+        this -> scale = _scale; this -> description = _description;
+        fileInput.close();
+    }
+}
+Voucher :: Voucher (float scale, string description)
+{
+    this -> scale = scale;
+    this -> description = description;
+}
+string Voucher :: getDescription()
+{
+    return description;
+}
+float Voucher :: getScale()
+{
+    return scale;
+}
