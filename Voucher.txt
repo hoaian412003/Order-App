@@ -1,0 +1,5 @@
+0.5 Qui Khach duoc giam 50%
+0.2 Qui Khach duoc giam 20%
+0.7 Qui Khach duoc giam 70%, giam toi da 100k
+0.1 Qui Khach duoc giam 10%, tang mot chai nuoc 7UP
+0.2 Qui khach duoc giam 20%

@@ -5,7 +5,7 @@ class User {
   string username, password;
 
 public:
-  User();
+  User() { username = "", password = ""; }
   void Login();
   // Input username and password. Check username and password in file "User.txt"
   // if have correct set this -> username = username; this -> password =
