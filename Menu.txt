@@ -1,33 +1,18 @@
 Pizza con loc hai san
-S M L
-129 219 289
+129
 Pizza Ga Nuong Nam
-S M L
-109
-269
 249
 Pizza Pho mai
-S M L
-Pizza Pho mai
-S M L
-79 139 209
+79
 Com Canh Ga
-S M L
-115
-120
 125
 Com chien hai san
-S M L
-99 100 101
+99
 Mi Y
-S M L
-130 135 140
+130
 Aquafina
-500ml 1.5ml
-20 35
+20
 Pepsi
-335ml 1.5l
-30 42
+30
 7UP
-335ml 1.5L
-30 42
+30

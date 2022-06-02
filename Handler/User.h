@@ -1,8 +1,13 @@
 #include "../Model/User.h"
 #include <bits/stdc++.h>
+#include <cstdlib>
 #include <fstream>
 using namespace std;
+
 void User::Login() {
+  if (this->username != "") {
+    return;
+  }
   cout << "Nhap username va password de mua hang\n";
   cout << "Neu khach hang chua co tai khoang, nhap \"Register\" de tao tai "
           "khoan \n";
@@ -23,6 +28,7 @@ void User::Login() {
       this->username = username;
       this->password = password;
       cout << "Login thanh cong\n";
+      in.close();
       return;
     }
   }
